@@ -1,2 +1,2 @@
 # Dheeraj Kumar Pant
-https://dheeraj-pant.github.io
+https://dheerajpant.github.io
