@@ -30,11 +30,15 @@ document.getElementById('form1').addEventListener('submit', function (evt) {
     const cementQuantityForChinai = (cementRatioForChinai * dryVolumeOfMortarForJoiningBricks * densityOfCementInKgPerCubicMeter) / (cementRatioForChinai + sandRatioForChinai)
     const sandQuantityForChinai = (sandRatioForChinai * dryVolumeOfMortarForJoiningBricks * densityOfSandInKgPerCubicMeter) / (cementRatioForChinai + sandRatioForChinai)
 
-    const cementBagsForChinai = Math.ceil(cementQuantityForChinai / 50)
-    const sandQuantityInQuintalsForChinai = Math.ceil(sandQuantityForChinai / 100)
+    const cementBagsForChinaiExact = +(cementQuantityForChinai / 50).toFixed(3)
+    const cementBagsForChinai = Math.ceil(cementBagsForChinaiExact)
+    const sandQuantityInQuintalsForChinaiExact = +(sandQuantityForChinai / 100).toFixed(3)
+    const sandQuantityInQuintalsForChinai = Math.ceil(sandQuantityInQuintalsForChinaiExact)
 
     const finalPriceOfCementForChinai = cementBagsForChinai * priceOfCementPer50Kg
+    const finalPriceOfCementForChinaiExact = +(cementBagsForChinaiExact * priceOfCementPer50Kg).toFixed(3)
     const finalPriceOfSandForChinai = sandQuantityInQuintalsForChinai * priceOfSandPer100Kg
+    const finalPriceOfSandForChinaiExact = +(sandQuantityInQuintalsForChinaiExact * priceOfSandPer100Kg).toFixed(3)
     const finalPriceOfBricksForChinai = numberOfBricks * brickPrice
 
     // #################### Estimation For Plastering ##################################
@@ -43,18 +47,21 @@ document.getElementById('form1').addEventListener('submit', function (evt) {
     const cementQuantityForPlastering = (cementRatioForPlastering * dryVolumeOfMortarForPlastering * densityOfCementInKgPerCubicMeter) / (cementRatioForPlastering + sandRatioForPlastering)
     const sandQuantityForPlastering = (sandRatioForPlastering * dryVolumeOfMortarForPlastering * densityOfSandInKgPerCubicMeter) / (cementRatioForPlastering + sandRatioForPlastering)
 
-    const cementBagsForPlastering = Math.ceil(cementQuantityForPlastering / 50)
-    const sandQuantityInQuintalsForPlastering = Math.ceil(sandQuantityForPlastering / 100)
+    const cementBagsForPlasteringExact = +(cementQuantityForPlastering / 50).toFixed(3)
+    const cementBagsForPlastering = Math.ceil(cementBagsForPlasteringExact)
+    const sandQuantityInQuintalsForPlasteringExact = +(sandQuantityForPlastering / 100).toFixed(3)
+    const sandQuantityInQuintalsForPlastering = Math.ceil(sandQuantityInQuintalsForPlasteringExact)
 
     const finalPriceOfCementForPlastering = cementBagsForPlastering * priceOfCementPer50Kg
+    const finalPriceOfCementForPlasteringExact = +(cementBagsForPlasteringExact * priceOfCementPer50Kg).toFixed(3)
     const finalPriceOfSandForPlastering = sandQuantityInQuintalsForPlastering * priceOfSandPer100Kg
-
+    const finalPriceOfSandForPlasteringExact = +(sandQuantityInQuintalsForPlasteringExact * priceOfSandPer100Kg).toFixed(3)
 
     const output = document.getElementById("answer");
     output.innerHTML =
         `
         <div>
-            <h2>For Chinai of 9" wall, the estimation for cement and sand: INR ${finalPriceOfCementForChinai + finalPriceOfSandForChinai + finalPriceOfBricksForChinai}</h2>
+            <h2>For Chinai of 9" wall, the estimation for cement and sand: INR ${finalPriceOfCementForChinai + finalPriceOfSandForChinai + finalPriceOfBricksForChinai} (Precisely :  ${(finalPriceOfCementForChinaiExact + finalPriceOfSandForChinaiExact + finalPriceOfBricksForChinai).toFixed(3)})</h2>
             <table>
                 <tr>
                 <th></th>
@@ -65,19 +72,19 @@ document.getElementById('form1').addEventListener('submit', function (evt) {
                 <tr>
                 <td><b>Quantity</b>
                 <td>${numberOfBricks} Bricks</td>
-                <td>${cementBagsForChinai} Bags</td>
-                <td>${sandQuantityInQuintalsForChinai} Quintals</td>
+                <td>${cementBagsForChinai} Bags (${cementBagsForChinaiExact})</td>
+                <td>${sandQuantityInQuintalsForChinai} Quintals (${sandQuantityInQuintalsForChinaiExact})</td>
                 </tr>
                 <tr>
                 <td><b>Price</b>
                 <td>INR ${finalPriceOfBricksForChinai}</td>
-                <td>INR ${finalPriceOfCementForChinai}</td>
-                <td>INR ${finalPriceOfSandForChinai}</td>
+                <td>INR ${finalPriceOfCementForChinai} (Exact Price: ${finalPriceOfCementForChinaiExact})</td>
+                <td>INR ${finalPriceOfSandForChinai} (Exact Price: ${finalPriceOfSandForChinaiExact})</td>
                 </tr>
             </table> 
         </div>
         <div>
-            <h2>For Plastering ONE SIDE of given wall area ${areaInSquareFeet}sqft, the estimation for cement and sand: INR ${finalPriceOfCementForPlastering + finalPriceOfSandForPlastering}</h2>
+            <h2>For Plastering ONE SIDE of given wall area ${areaInSquareFeet}sqft, the estimation for cement and sand: INR ${finalPriceOfCementForPlastering + finalPriceOfSandForPlastering} (Precisely :  ${(finalPriceOfCementForPlasteringExact + finalPriceOfSandForPlasteringExact).toFixed(3)})</h2>
             <table>
                 <tr>
                 <th></th>
@@ -86,13 +93,13 @@ document.getElementById('form1').addEventListener('submit', function (evt) {
                 </tr>
                 <tr>
                 <td><b>Quantity</b>
-                <td>${cementBagsForPlastering} Bags</td>
-                <td>${sandQuantityInQuintalsForPlastering} Quintals</td>
+                <td>${cementBagsForPlastering} Bags (${cementBagsForPlasteringExact})</td>
+                <td>${sandQuantityInQuintalsForPlastering} Quintals (${sandQuantityInQuintalsForPlasteringExact})</td>
                 </tr>
                 <tr>
                 <td><b>Price</b>
-                <td>INR ${finalPriceOfCementForPlastering}</td>
-                <td>INR ${finalPriceOfSandForPlastering}</td>
+                <td>INR ${finalPriceOfCementForPlastering} (Exact Price: ${finalPriceOfCementForPlasteringExact})</td>
+                <td>INR ${finalPriceOfSandForPlastering} (Exact Price: ${finalPriceOfSandForPlasteringExact})</td>
                 </tr>
             </table>
         </div>
