@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall Construction Meter</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h1>Cost Estimation of 9 Inch Brick Wall</h1>
+
+    <form id="form1">
+        <label for="area">Area In Square Foot:</label><br>
+        <input type="text" id="area" name="area" value="100"><br><br>
+        <label for="brickLength">Length of Brick In Inches</label><br>
+        <input type="text" id="brickLength" name="brickLength" value="9"><br><br>
+        <label for="brickWidth">Width of Brick In Inches</label><br>
+        <input type="text" id="brickWidth" name="brickWidth" value="4.5"><br><br>
+        <label for="brickHeight">Height of Brick In Inches</label><br>
+        <input type="text" id="brickHeight" name="brickHeight" value="3"><br><br>
+        <label for="thicknessOfMortarForJoiningBricks">Thickness of Mortar (for joining Bricks) in inches</label><br>
+        <input type="text" id="thicknessOfMortarForJoiningBricks" name="thicknessOfMortarForJoiningBricks"
+            value="0.5"><br><br>
+        <label for="thicknessOfMortarForPlastering">Thickness of Mortar (for plastering) in inches</label><br>
+        <input type="text" id="thicknessOfMortarForPlastering" name="thicknessOfMortarForPlastering"
+            value="0.5"><br><br>
+        <label for="cementPrice">Price of 50Kg Cement:</label><br>
+        <input type="text" id="cementPrice" name="cementPrice" value="400"><br><br>
+        <label for="sandPrice">Price of 100Kg Sand:</label><br>
+        <input type="text" id="sandPrice" name="sandPrice" value="88"><br><br>
+        <label for="brickPrice">Price of Bricks:</label><br>
+        <input type="text" id="brickPrice" name="brickPrice" value="7.5"><br><br>
+        <label for="densityOfCement">Cement Density In Kg per cubic meters:</label><br>
+        <input type="text" id="densityOfCement" name="densityOfCement" value="1440"><br><br>
+        <label for="densityOfSand">Sand Density In Kg per cubic meters:</label><br>
+        <input type="text" id="densityOfSand" name="densityOfSand" value="1682"><br><br>
+        <label for="ratioForChinai">Ratio between Cement and Sand for Joining Bricks</label><br>
+        <input type="text" id="ratioForChinai" name="ratioForChinai" value="1:5"><br><br>
+        <label for="ratioForPlastering">Ratio between Cement and Sand for Plastering</label><br>
+        <input type="text" id="ratioForPlastering" name="ratioForPlastering" value="1:5"><br><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="answer">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
