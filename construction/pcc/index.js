@@ -18,14 +18,14 @@ document.getElementById('form1').addEventListener('submit', function (evt) {
     // console.log(sandRatio);
     // console.log(aggregateRatio);
 
-    const areaInSquareFeet = area.value
-    const priceOfCementPer50Kg = cementPrice.value
-    const priceOfSandPer100Kg = sandPrice.value
-    const priceOfAggregatePer100Kg = aggregatePrice.value
-    const densityOfCementInKgPerCubicMeter = densityOfCement.value
-    const densityOfSandInKgPerCubicMeter = densityOfSand.value
-    const densityOfAggregateInKgPerCubicMeter = densityOfAggregate.value
-    const thicknessInInch = thicknessOfPCC.value
+    const areaInSquareFeet = parseFloat(area.value)
+    const priceOfCementPer50Kg = parseFloat(cementPrice.value)
+    const priceOfSandPer100Kg = parseFloat(sandPrice.value)
+    const priceOfAggregatePer100Kg = parseFloat(aggregatePrice.value)
+    const densityOfCementInKgPerCubicMeter = parseFloat(densityOfCement.value)
+    const densityOfSandInKgPerCubicMeter = parseFloat(densityOfSand.value)
+    const densityOfAggregateInKgPerCubicMeter = parseFloat(densityOfAggregate.value)
+    const thicknessInInch = parseFloat(thicknessOfPCC.value)
     const wetVolumeInCubicFeet = (areaInSquareFeet * thicknessInInch) / 12
     const conversionFactorFromDrytoWet = 1.54
     const dryVolumeInCubicMeter = 0.0283168 * conversionFactorFromDrytoWet * wetVolumeInCubicFeet
