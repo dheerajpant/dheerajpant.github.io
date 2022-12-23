@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCC Meter</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h1>Custom Cost Estimation of PCC (Plain Cement Concrete)</h1>
+
+    <form id="form1">
+        <label for="area">Area In Square Foot:</label><br>
+        <input type="text" id="area" name="area" value="100"><br><br>
+        <label for="thicknessOfPCC">Thickness Of PCC in inches:</label><br>
+        <input type="text" id="thicknessOfPCC" name="thicknessOfPCC" value="3"><br><br>
+        <label for="cementPrice">Price of 50Kg Cement:</label><br>
+        <input type="text" id="cementPrice" name="cementPrice" value="400"><br><br>
+        <label for="sandPrice">Price of 100Kg Sand:</label><br>
+        <input type="text" id="sandPrice" name="sandPrice" value="88"><br><br>
+        <label for="aggregatePrice">Price of 100Kg Aggregate:</label><br>
+        <input type="text" id="aggregatePrice" name="aggregatePrice" value="85"><br><br>
+        <label for="densityOfCement">Cement Density In Kg per cubic meters:</label><br>
+        <input type="text" id="densityOfCement" name="densityOfCement" value="1440-1442"><br><br>
+        <label for="densityOfSand">Sand Density In Kg per cubic meters:</label><br>
+        <input type="text" id="densityOfSand" name="densityOfSand" value="1450-2082"><br><br>
+        <label for="densityOfAggregate">Aggregate Density In Kg per cubic meters:</label><br>
+        <input type="text" id="densityOfAggregate" name="densityOfAggregate" value="1450-2082"><br><br>
+        <label for="ratio">Ratio between Cement, Sand and Aggregate:</label><br>
+        <input type="text" id="ratio" name="ratio" value="1:3:6"><br><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="answer">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
