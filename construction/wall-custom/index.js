@@ -139,7 +139,7 @@ document.getElementById('form1').addEventListener('submit', function (evt) {
         <div>
             <h2>For Plastering ONE SIDE of given wall area ${areaInSquareFeet}sqft, the estimation (taking min density) for cement and sand: INR ${finalPriceOfCementForPlasteringMin + finalPriceOfSandForPlasteringMin} (Precisely :  ${(finalPriceOfCementForPlasteringExactMin + finalPriceOfSandForPlasteringExactMin).toFixed(3)})</h2>
             <table>
-                <tr>Max
+                <tr>
                 <th></th>
                 <th>Cement</th>
                 <th>Sand</th>
@@ -159,7 +159,7 @@ document.getElementById('form1').addEventListener('submit', function (evt) {
         <div>
             <h2>For Plastering ONE SIDE of given wall area ${areaInSquareFeet}sqft, the estimation (taking max density) for cement and sand: INR ${finalPriceOfCementForPlasteringMax + finalPriceOfSandForPlasteringMax} (Precisely :  ${(finalPriceOfCementForPlasteringExactMax + finalPriceOfSandForPlasteringExactMax).toFixed(3)})</h2>
             <table>
-                <tr>Max
+                <tr>
                 <th></th>
                 <th>Cement</th>
                 <th>Sand</th>
