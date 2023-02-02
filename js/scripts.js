@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   function error() {
     status.classList.add("error");
-    status.innerHTML = "Failed!";
+    status.innerHTML = "Something went wrong, try again later!";
     setTimeout(() => {
       status.classList.remove("error");
       status.innerHTML = "";
@@ -147,7 +147,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let bool_match = String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
     if (email_splitted.length != 2 || email_splitted[0].length > 28 || !bool_match) {
-      _error("Failed! please enter valid email!");
+      _error("Something went wrong, try again later!");
     }
     else {
       fetch(API_URI, {
@@ -164,11 +164,11 @@ window.addEventListener("DOMContentLoaded", function () {
             ajax(form.method, form.action, form_data, success, error);
           }
           else {
-            _error(message = "Failed! entered email doesn't exist!");
+            _error(message = "Something went wrong, try again later!");
           }
         })
         .catch(function (err) {
-          _error(message = "Failed! some network issue, maybe a lot of requests!");
+          _error(message = "Something went wrong, try again later!");
         });
     }
   });
