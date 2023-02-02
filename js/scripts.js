@@ -107,46 +107,69 @@ window.addEventListener("DOMContentLoaded", function () {
     form.reset();
     status.classList.add("success");
     status.innerHTML = "Thanks!";
+    setTimeout(() => {
+      status.classList.remove("success");
+      status.innerHTML = "";
+    }, 3500);
   }
 
   function error() {
     status.classList.add("error");
     status.innerHTML = "Failed!";
+    setTimeout(() => {
+      status.classList.remove("error");
+      status.innerHTML = "";
+    }, 3500);
   }
 
-  function validateEmail(email) {
-
-    const acceptList = ["gmail.com", "outlook.com", "hotmail.com", "yahoo.com"];
-    let email_splitted = email.split('@');
-
-    if (email_splitted.length != 2) {
-      return false;
-    }
-
-    if (email_splitted[0].length > 28 || (!acceptList.includes(email_splitted[1].toLowerCase()))) {
-      console.log(email);
-      return false;
-    }
-    return String(email)
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      );
-  };
+  function _error(message) {
+    status.classList.add("error");
+    status.innerHTML = message;
+    setTimeout(() => {
+      status.classList.remove("error");
+      status.innerHTML = "";
+    }, 3500);
+  }
 
   // handle the form submission event
-
   form.addEventListener("submit", function (ev) {
+
     ev.preventDefault();
+    const API_KEY = 'at_CiYqc8As48KN6XbGzzbxklWRC9LnV';
+    const API_DOMAIN = `https://emailverification.whoisxmlapi.com`;
 
-    let data = new FormData(form);
+    let form_data = new FormData(form);
+    const email = form_data.get('Email');
 
-    if (!validateEmail(data.get('Email'))) {
-      status.classList.add("error");
-      status.innerHTML = "Failed! please enter valid personal email";
+    const API_URI = `${API_DOMAIN}/api/v2?apiKey=${API_KEY}&emailAddress=${email}`;
+
+    let email_splitted = email.split('@');
+    let bool_match = String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
+    if (email_splitted.length != 2 || email_splitted[0].length > 28 || !bool_match) {
+      _error("Failed! please enter valid email!");
     }
     else {
-      ajax(form.method, form.action, data, success, error);
+      fetch(API_URI, {
+        method: 'get'
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("HTTP status " + response.status);
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          if (data['formatCheck'] == 'true' && data['smtpCheck'] == 'true' && data['dnsCheck'] == 'true') {
+            ajax(form.method, form.action, form_data, success, error);
+          }
+          else {
+            _error(message = "Failed! entered email doesn't exist!");
+          }
+        })
+        .catch(function (err) {
+          _error(message = "Failed! some network issue, maybe a lot of requests!");
+        });
     }
   });
 });
