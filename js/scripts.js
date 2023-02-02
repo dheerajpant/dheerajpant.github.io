@@ -135,13 +135,13 @@ window.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (ev) {
 
     ev.preventDefault();
-    const API_KEY = 'at_CiYqc8As48KN6XbGzzbxklWRC9LnV';
-    const API_DOMAIN = `https://emailverification.whoisxmlapi.com`;
+    const API_KEY = '4a139d8384fa40bb877b70b48a487444';
+    const API_DOMAIN = `https://emailvalidation.abstractapi.com/v1/`;
 
     let form_data = new FormData(form);
     const email = form_data.get('Email');
 
-    const API_URI = `${API_DOMAIN}/api/v2?apiKey=${API_KEY}&emailAddress=${email}`;
+    const API_URI = `${API_DOMAIN}?api_key=${API_KEY}&email=${email}`;
 
     let email_splitted = email.split('@');
     let bool_match = String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
@@ -160,7 +160,7 @@ window.addEventListener("DOMContentLoaded", function () {
           return response.json();
         })
         .then(function (data) {
-          if (data['formatCheck'] == 'true' && data['smtpCheck'] == 'true' && data['dnsCheck'] == 'true') {
+          if (data['is_valid_format']['value'] && data['is_smtp_valid']['value']) {
             ajax(form.method, form.action, form_data, success, error);
           }
           else {
