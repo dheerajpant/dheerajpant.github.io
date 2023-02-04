@@ -2293,13 +2293,12 @@ blockquote {
 }
 
 .certi-thumbnail-size {
-    width: 12rem;
-    height: 7.2rem;
-}
-
-.certi-thumbnail-size-mit {
-    width: 12rem;
-    height: 3.5rem;
+    display: block;
+    margin: auto;
+    max-width: 180px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
 }
 
 .projects-page-heading {
