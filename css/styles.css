@@ -2292,13 +2292,19 @@ blockquote {
     font-size: 2rem !important
 }
 
-.certi-thumbnail-size {
-    display: block;
-    margin: auto;
-    max-width: 180px;
-    max-height: 180px;
-    width: auto;
-    height: auto;
+.certi-thumbnail-size-mitx {
+    width: 200;
+    height: 48;
+}
+
+.certi-thumbnail-size-dl {
+    width: 150;
+    height: 95;
+}
+
+.certi-thumbnail-size-stanford {
+    width: 150;
+    height: 85;
 }
 
 .projects-page-heading {
