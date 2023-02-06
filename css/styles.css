@@ -1311,3 +1311,9 @@ div.timeline-content .icon-github {
     margin-bottom: -20px;
     color: #b0b8bf
 }
+
+.icon-sun {
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke-width: 0.2px;
+}
