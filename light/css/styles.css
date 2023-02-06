@@ -11,7 +11,7 @@ h1,
 h2,
 h3,
 h4 {
-    margin-bottom: .5rem
+    margin-bottom: 1.5rem
 }
 
 #mainNav .navbar-brand,
@@ -50,18 +50,16 @@ ul {
     margin-bottom: 1rem
 }
 
-.btn,
 .btn:hover {
-    color: #212529
+    color: #fff;
+    background-color: #000000
 }
 
-#skills ul li,
-.certifications-page-heading,
+
 .icon-github:hover,
 .icon-linkedin:hover,
-.icon-mail4:hover,
-.skills-page-heading {
-    color: #000000
+.icon-mail4:hover {
+    color: rgba(0, 0, 0, 0.75)
 }
 
 .btn,
@@ -137,17 +135,15 @@ body {
 
 #mainNav {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-    background-color: #22262a;
+    background-color: #fff;
     transition: background-color .2s
 }
 
 #mainNav .navbar-brand {
     font-weight: 700;
-    color: #dee1e4
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-    color: #b0b8bf;
     font-family: Montserrat, sans-serif;
     font-weight: 700;
     font-size: .9rem;
@@ -155,7 +151,7 @@ body {
 }
 
 a {
-    color: rgba(78, 87, 96, .1);
+    color: #000000;
     text-decoration: none
 }
 
@@ -166,13 +162,18 @@ a:hover {
 .btn:hover,
 .certi-canvas,
 .certi-content>a,
-.nav-link:focus,
-.nav-link:hover,
 .navbar-brand:focus,
 .navbar-brand:hover,
 .navbar-toggler:focus,
 .navbar-toggler:hover {
-    text-decoration: none
+    text-decoration: none;
+}
+
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+    text-decoration: none;
+    color: rgb(0 0 0 / 75%);
 }
 
 img {
@@ -188,13 +189,6 @@ table tr td {
     padding: 1rem
 }
 
-.contact-envelope:hover,
-.contact-github:hover,
-.contact-linkedin:hover,
-.contect-section-title,
-table tr td a {
-    color: #2b3035
-}
 
 button {
     border-radius: 0;
@@ -301,12 +295,6 @@ hr {
     outline: 0
 }
 
-.btn-light,
-.btn-primary:hover {
-    background-color: #22262a;
-    color: #b0b8bf
-}
-
 .btn-primary:hover {
     border: none
 }
@@ -377,7 +365,7 @@ hr {
     padding: .25rem .75rem;
     font-size: 1.25rem;
     line-height: 1;
-    background-color: rgba(0, 0, 0, .01);
+    background-color: white;
     border: 0 solid rgba(0, 0, 0, .01);
     border-radius: .3rem
 }
@@ -396,32 +384,19 @@ hr {
 }
 
 .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28167,176,184, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 
-#mainNav .navbar-nav .nav-item .nav-link:active,
-#mainNav .navbar-nav .nav-item .nav-link:hover,
-.color-\#b0b8bf,
-.date,
 div.timeline-content .icon-github:hover {
-    color: #fff
+    /* color: #fff */
+    color: rgba(0, 0, 0, 0.75)
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active,
-.color-\#b0b8bf:hover {
-    color: #fff !important
-}
 
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
     transition: .5s
-}
-
-hr.divider,
-hr.light {
-    max-width: 3.25rem;
-    border-width: .3rem
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -442,10 +417,6 @@ hr.light {
 .carousel-indicators .active,
 .certi-content:hover .certi-content-overlay {
     opacity: 1
-}
-
-.bg-primary {
-    background-color: #22262a !important
 }
 
 .justify-content-center {
@@ -524,14 +495,6 @@ body,
 html {
     width: 100%;
     height: 100%
-}
-
-hr.divider {
-    border-color: #2b3035
-}
-
-hr.light {
-    border-color: #b0b8bf
 }
 
 .btn-xl-ii {
@@ -655,7 +618,6 @@ hr.light {
 #skills ul li {
     margin: 7px;
     padding: 5px 10px;
-    background: #b0b8bf;
     cursor: default;
     font-size: 1.2em;
     border-radius: 3px
@@ -678,9 +640,7 @@ hr.light {
 }
 
 #skills ul li.concept-library-framework {
-    color: #22262a;
-    background: linear-gradient(to bottom, #757b81 -5%, #b0b8bf 100%);
-    box-shadow: 0 2px 6px .5px rgb(0 0 0 / 25%);
+    box-shadow: 2px 2.5px 6.5px 1px rgba(0, 0, 0, 0.8);
     font-weight: 1.2em
 }
 
@@ -693,7 +653,7 @@ hr.light {
 }
 
 .certi-content .certi-content-overlay {
-    background: rgba(0, 0, 0, .7);
+    background: rgba(255, 255, 255, .75);
     position: absolute;
     height: 99%;
     width: 100%;
@@ -707,20 +667,14 @@ hr.light {
     transition: .4s ease-in-out
 }
 
-.progress-circle:after,
-footer {
-    background-color: #b0b8bf
-}
-
 .certi-canvas {
     height: 250px;
     text-align: center;
-    background: linear-gradient(to bottom, #757b81 -5%, #b0b8bf 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.7) 100%);
     padding-top: 2rem
 }
 
 .certi-canvas>h2 {
-    color: #22252a;
     font-size: 1.3rem
 }
 
@@ -750,7 +704,6 @@ footer {
     font-size: 18px;
     background: 0 0;
     transition: .4s ease-in-out;
-    color: #2b3035;
     box-shadow: 0 7px 20px -6px rgb(0 0 0 / 65%);
     font-weight: 700
 }
@@ -762,7 +715,6 @@ footer {
 }
 
 .certi-content-details p {
-    color: #fff;
     font-size: .8em
 }
 
@@ -771,8 +723,7 @@ footer {
 }
 
 .page-section {
-    padding: 6rem 0;
-    background: #b0b8bf;
+    padding: 5rem 0;
     overflow: hidden
 }
 
@@ -874,22 +825,11 @@ footer {
 
     #mainNav {
         box-shadow: none;
-        background-color: transparent
+        background-color: #fff
     }
 
-    #mainNav .navbar-brand,
-    #mainNav.navbar-scrolled .navbar-brand:hover,
-    #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
-        color: #b0b8bf
-    }
-
-    #mainNav .navbar-brand:hover,
-    #mainNav .navbar-nav .nav-item .nav-link:hover {
-        color: #fff
-    }
 
     #mainNav .navbar-nav .nav-item .nav-link {
-        color: #b0b8bf;
         padding: 0 1rem
     }
 
@@ -899,12 +839,7 @@ footer {
 
     #mainNav.navbar-scrolled {
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .55);
-        background-color: #22262a
-    }
-
-    #mainNav.navbar-scrolled .navbar-brand,
-    #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link {
-        color: #22262a
+        background-color: #fff
     }
 
     .my-lg-0 {
@@ -980,22 +915,9 @@ footer {
     animation: 4s forwards status
 }
 
-::placeholder {
-    color: #454d55;
-    opacity: 1
-}
-
-:-ms-input-placeholder {
-    color: #454d55
-}
-
-::-ms-input-placeholder {
-    color: #454d55
-}
-
 .timeline::before {
     content: "";
-    background: #b0b8bf;
+    background: #000000;
     width: 5px;
     height: 95%;
     position: absolute;
@@ -1027,7 +949,7 @@ footer {
     top: 30px;
     left: -15px;
     border-width: 10px 15px 10px 0;
-    border-color: transparent #b0b8bf transparent transparent
+    border-color: transparent #000000 transparent transparent
 }
 
 .timeline-item::after {
@@ -1042,7 +964,7 @@ footer {
     padding: 10px 30px;
     border-radius: 4px;
     background: 0 0;
-    box-shadow: 0 25px 25px -15px rgba(0, 0, 0, .8)
+    box-shadow: 5px 5px 20px -5px rgb(0 0 0 / 80%)
 }
 
 .timeline-content::after {
@@ -1054,29 +976,26 @@ footer {
     top: 30px;
     right: -15px;
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent #b0b8bf
+    border-color: transparent transparent transparent #000000
 }
 
 .timeline-img {
-    width: 30px;
-    height: 30px;
-    background: #22262a;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     position: absolute;
-    border: 5px solid #b0b8bf;
+    border: 13px solid #000;
     left: 50%;
     margin-top: 25px;
-    margin-left: -15px
+    margin-left: -13px
 }
 
 .date {
-    background: linear-gradient(to bottom, #2b3035 -10%, #1a1d20 100%);
     border-radius: 3px;
     padding: 6px;
     position: absolute;
     top: 0;
     right: 0;
-    color: #b0b8bf
 }
 
 @media screen and (max-width:768px) {
@@ -1105,7 +1024,7 @@ footer {
         top: 30px;
         left: -15px;
         border-width: 10px 15px 10px 0;
-        border-color: transparent #b0b8bf transparent transparent
+        border-color: transparent #000000 transparent transparent
     }
 }
 
@@ -1160,19 +1079,12 @@ footer {
 }
 
 .footer-class {
-    color: #2b3035;
     font-size: .83rem;
     padding-bottom: .35rem
 }
 
-.certi-content-text,
-.certi-content-title,
-.color-\#b0b8bf {
-    color: #b0b8bf !important
-}
-
-.mt-15 {
-    margin-top: 15px
+.mt-25 {
+    margin-top: 25px
 }
 
 .profile-pic {
@@ -1180,14 +1092,12 @@ footer {
 }
 
 .portfolio-title {
-    color: #b0b8bf;
     font-size: 1.2rem;
     margin-left: .35rem;
     margin-top: 1.2rem
 }
 
 .portfolio-title-secondary {
-    color: #b0b8bf;
     font-size: 1rem;
     margin-left: .35rem;
     margin-top: .5rem
@@ -1198,11 +1108,10 @@ footer {
 }
 
 .title-page-content {
-    color: #b0b8bf;
     word-spacing: 1.5px;
     text-align: justify;
     font-size: 1.05rem;
-    font-weight: 550
+    margin-top: 22px;
 }
 
 .certi-content-title {
@@ -1224,26 +1133,17 @@ footer {
     height: 85
 }
 
-.projects-page-heading,
-.timeline-content-description {
-    color: #b0b8bf
-}
-
 .timeline-content-title {
-    color: #b0b8bf;
     padding-top: 1.2rem;
     font-size: 2rem
 }
 
 .timeline-content-link {
-    color: #b0b8bf;
     font-size: .75rem
 }
 
 .contact-section {
-    color: #22262a;
     padding: 8rem 0;
-    background: #b0b8bf
 }
 
 .contact-form-text-alignment {
@@ -1253,7 +1153,6 @@ footer {
 .contact-form-label {
     font-weight: 700;
     font-size: 1.2rem;
-    color: #2b3035;
     margin-left: 10px
 }
 
@@ -1309,5 +1208,4 @@ div.timeline-content .icon-github {
     width: 5rem;
     height: 5rem;
     margin-bottom: -20px;
-    color: #b0b8bf
 }
