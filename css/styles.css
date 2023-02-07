@@ -55,11 +55,10 @@ ul {
     color: #212529
 }
 
-#skills ul li,
 .icon-github:hover,
 .icon-linkedin:hover,
 .icon-mail4:hover {
-    color: #2b3035
+    color: #000
 }
 
 .certifications-page-heading,
