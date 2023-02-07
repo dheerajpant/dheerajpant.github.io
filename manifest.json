@@ -1,0 +1,22 @@
+{
+    "name": "Dheeraj Pant",
+    "short_name": "Dheeraj",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#2b3035",
+    "theme_color": "#2b3035",
+    "scope": ".",
+    "description": "I am Dheeraj. I pursued my master's degree in Computer Science from IIT Kanpur. I am interested in Machine Learning, Data Science and Statistics.",
+    "icons": [
+        {
+            "src": "thumbnails/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "thumbnails/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
