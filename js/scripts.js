@@ -219,3 +219,11 @@ $(document).ready(function () {
   $window.on('scroll resize', check_if_in_view);
   $window.trigger('scroll');
 });
+
+
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register(
+    '/dheerajpant.github.io/sw.js',
+    { scope: '/dheerajpant.github.io/' }
+  )
+}
