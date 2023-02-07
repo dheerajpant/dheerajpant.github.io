@@ -449,6 +449,10 @@ hr.divider.dark {
     margin-bottom: 4rem !important
 }
 
+.contact-section hr.divider.dark {
+    margin-bottom: 2rem !important
+}
+
 @media (prefers-reduced-motion:reduce) {
 
     .btn,
