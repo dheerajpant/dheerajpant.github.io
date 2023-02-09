@@ -237,3 +237,12 @@ async function registerSW() {
     }
   }
 }
+
+// Toggler code for switching light theme to dark theme and vice-versa
+
+document.getElementById('toggling-switch').onclick = function () {
+  let elementsToBeToggled = document.getElementsByClassName("toggle-switch-element");
+  for (let i = 0; i < elementsToBeToggled.length; i++) {
+    elementsToBeToggled[i].classList.toggle('light-theme');
+  }
+}
