@@ -807,7 +807,7 @@ html {
 }
 
 .light-theme.certi-canvas {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.7))
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.001))
 }
 
 .certi-canvas>h4 {
