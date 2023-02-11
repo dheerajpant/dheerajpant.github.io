@@ -1369,7 +1369,7 @@ footer.light-theme {
 
 .timeline-content-title {
     color: var(--default-theme-light-color);
-    padding-top: 1.2rem;
+    padding-top: 30px;
     font-size: 1.5rem
 }
 
