@@ -1180,7 +1180,7 @@ html {
 }
 
 .light-theme.date {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1516981792717087) 0%, rgba(0, 0, 0, 0.07886904761904767) 20%, rgba(189, 189, 189, 0.06486344537815125) 44%, rgba(232, 230, 230, 0.07046568627450978) 56%, rgba(0, 0, 0, 0.09007352941176472) 80%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(255, 255, 255, 0.14) 50%, rgba(0, 0, 0, 0.14) 100%);
     color: var(--light-theme-foreground);
     font-weight: 550;
 }
