@@ -638,7 +638,8 @@ html {
 
     .homepage-ii {
         width: 62%;
-        padding-right: 14rem
+        padding-right: 14rem;
+        margin-top: 1.75rem
     }
 }
 
@@ -661,7 +662,8 @@ html {
     .homepage-ii {
         width: 60%;
         padding-left: 5.5rem;
-        padding-right: 5.5rem
+        padding-right: 5.5rem;
+        margin-top: 1.75rem
     }
 }
 
@@ -684,7 +686,8 @@ html {
     .homepage-ii {
         width: 75%;
         padding-left: 5.5rem;
-        padding-right: 5.5rem
+        padding-right: 5.5rem;
+        margin-top: 1.75rem
     }
 }
 
