@@ -1163,10 +1163,8 @@ html {
 }
 
 .light-theme.timeline-img {
-    width: 20px;
-    height: 20px;
-    border: 13px solid var(--light-theme-foreground);
-    margin-left: -12.3px
+    background: var(--light-theme-background);
+    border: 6px solid var(--light-theme-foreground)
 }
 
 .date {
