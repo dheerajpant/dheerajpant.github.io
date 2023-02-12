@@ -1092,7 +1092,6 @@ html {
 
 .timeline-item:nth-child(2n) .timeline-content {
     float: right;
-    padding: 40px 30px 10px
 }
 
 .timeline-item:nth-child(2n) .timeline-content .date {
