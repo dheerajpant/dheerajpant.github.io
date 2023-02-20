@@ -1,12 +1,11 @@
 :root {
-    --light-theme-foreground: rgba(34, 38, 42, 1);
-    --light-theme-background: rgba(239, 240, 242, 1);
-    --light-theme-hover: rgba(64, 68, 73, 0.6);
-    --default-theme-dark-color: rgba(34, 38, 42, 1);
-    --default-theme-more-darker-color: rgba(0, 0, 0, 1);
-    --default-theme-less-darker-color: rgba(34, 38, 42, 0.5);
-    --default-theme-light-color: rgba(176, 184, 191, 1);
-    --default-theme-more-brighter-color: rgba(255, 255, 255, 1);
+    --light-theme-foreground: 34, 38, 42;
+    --light-theme-background: 239, 240, 242;
+    --default-theme-dark-color: 34, 38, 42;
+    --default-theme-light-color: 176, 184, 191;
+    --box-shadow-navbar: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    --box-shadow-timeline: 0 25px 25px -15px rgba(0, 0, 0, .8);
+    --box-shadow-default: 2px 2.5px 6.5px 1px rgba(0, 0, 0, 0.7);
 }
 
 @font-face {
@@ -51,24 +50,24 @@ ul {
 /* Navbar style  */
 
 #mainNav {
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-    background-color: var(--default-theme-dark-color);
+    box-shadow: var(--box-shadow-navbar);
+    background-color: rgba(var(--default-theme-dark-color), 1);
     transition: background-color .2s
 }
 
 #mainNav.navbar-scrolled {
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .55);
-    background-color: var(--default-theme-dark-color)
+    box-shadow: var(--box-shadow-navbar);
+    background-color: rgba(var(--default-theme-dark-color), 1)
 }
 
 .color-default-theme-light-color {
-    color: var(--default-theme-light-color)
+    color: rgba(var(--default-theme-light-color), 1)
 }
 
 /* ---------------default-theme--------------- */
 
 #mainNav .navbar-nav .nav-item .nav-link {
-    color: var(--default-theme-light-color);
+    color: rgba(var(--default-theme-light-color), 1);
     font-family: Montserrat, sans-serif;
     font-weight: 700;
     font-size: .9rem;
@@ -78,41 +77,41 @@ ul {
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover,
 .color-default-theme-light-color:hover {
-    color: var(--default-theme-more-brighter-color)
+    color: rgba(var(--default-theme-light-color), 0.5)
 }
 
 #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link.active,
 #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
-    color: var(--default-theme-more-brighter-color)
+    color: rgba(var(--default-theme-light-color), 0.5)
 }
 
 /* ------------ light theme ------------ */
 
 .light-theme.color-default-theme-light-color {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .light-theme#mainNav {
-    background-color: var(--light-theme-background)
+    background-color: rgba(var(--light-theme-background), 1)
 }
 
 #mainNav .navbar-nav .nav-item .light-theme.nav-link {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 #mainNav .navbar-nav .nav-item .light-theme.nav-link.active,
 #mainNav .navbar-nav .nav-item .light-theme.nav-link:hover,
 .light-theme.color-default-theme-light-color:hover {
-    color: var(--light-theme-hover)
+    color: rgba(var(--light-theme-foreground), 0.5)
 }
 
 #mainNav.navbar-scrolled .navbar-nav .nav-item .light-theme.nav-link {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 #mainNav.navbar-scrolled .navbar-nav .nav-item .light-theme.nav-link.active,
 #mainNav.navbar-scrolled .navbar-nav .nav-item .light-theme.nav-link:hover {
-    color: var(--light-theme-hover)
+    color: rgba(var(--light-theme-foreground), 0.5)
 }
 
 /* ------------ end ------------ */
@@ -136,25 +135,25 @@ ul {
 .icon-github:hover,
 .icon-linkedin:hover,
 .icon-mail4:hover {
-    color: var(--default-theme-more-darker-color)
+    color: rgba(var(--default-theme-dark-color), 0.5)
 }
 
 .light-theme.icon-github:hover,
 .light-theme.icon-linkedin:hover,
 .light-theme.icon-mail4:hover,
 .light-theme.icon-moon:hover {
-    color: var(--light-theme-hover)
+    color: rgba(var(--light-theme-foreground), 0.5)
 }
 
 .certifications-page-heading,
 .skills-page-heading {
-    color: var(--default-theme-dark-color);
+    color: rgba(var(--default-theme-dark-color), 1);
     margin-bottom: 1.5rem
 }
 
 .light-theme.certifications-page-heading,
 .light-theme.skills-page-heading {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .btn,
@@ -224,12 +223,12 @@ section {
 
 .page-section {
     padding: 6rem 0;
-    background: var(--default-theme-light-color);
+    background: rgba(var(--default-theme-light-color), 1);
     overflow: hidden
 }
 
 .page-section.light-theme {
-    background: var(--light-theme-background)
+    background: rgba(var(--light-theme-background), 1)
 }
 
 body {
@@ -242,7 +241,7 @@ a {
 }
 
 a.light-theme {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 a:hover {
@@ -277,7 +276,7 @@ table tr td {
 
 .contect-section-title,
 table tr td a {
-    color: var(--default-theme-dark-color)
+    color: rgba(var(--default-theme-dark-color), 1)
 }
 
 button {
@@ -388,23 +387,23 @@ h3.contect-section-title {
 }
 
 .btn {
-    background-color: var(--default-theme-light-color);
-    color: var(--default-theme-dark-color)
+    background-color: rgba(var(--default-theme-light-color), 1);
+    color: rgba(var(--default-theme-dark-color), 1)
 }
 
 .btn:hover {
-    background-color: var(--default-theme-dark-color);
-    color: var(--default-theme-light-color)
+    background-color: rgba(var(--default-theme-dark-color), 1);
+    color: rgba(var(--default-theme-light-color), 1)
 }
 
 .light-theme.btn {
-    color: var(--light-theme-foreground);
-    background-color: var(--light-theme-background)
+    color: rgba(var(--light-theme-foreground), 1);
+    background-color: rgba(var(--light-theme-background), 1)
 }
 
 .light-theme.btn:hover {
-    color: var(--light-theme-background);
-    background-color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-background), 1);
+    background-color: rgba(var(--light-theme-foreground), 1)
 }
 
 .collapse:not(.show),
@@ -476,7 +475,7 @@ h3.contect-section-title {
 }
 
 .light-theme.navbar-toggler {
-    background-color: var(--light-theme-background)
+    background-color: rgba(var(--light-theme-background), 1)
 }
 
 .navbar-toggler-icon {
@@ -497,11 +496,11 @@ h3.contect-section-title {
 
 .date,
 div.timeline-content .icon-github:hover {
-    color: var(--default-theme-more-brighter-color)
+    color: rgba(var(--default-theme-light-color), 0.5)
 }
 
 div.timeline-content .light-theme.icon-github:hover {
-    color: var(--light-theme-hover)
+    color: rgba(var(--light-theme-foreground), 0.5)
 }
 
 nav ul li a,
@@ -531,11 +530,11 @@ nav ul li a:before {
 }
 
 .bg-primary {
-    background-color: var(--default-theme-dark-color)
+    background-color: rgba(var(--default-theme-dark-color), 1)
 }
 
 .light-theme.bg-primary {
-    background-color: var(--light-theme-background)
+    background-color: rgba(var(--light-theme-background), 1)
 }
 
 .justify-content-center {
@@ -553,7 +552,7 @@ nav ul li a:before {
 .btn-xl,
 .btn-xl-ii {
     border-radius: 10rem;
-    border: 1px solid var(--default-theme-dark-color)
+    border: 1px solid rgba(var(--default-theme-dark-color), 1)
 }
 
 .h-100 {
@@ -740,7 +739,7 @@ html {
 #skills ul li {
     margin: 7px;
     padding: 5px 10px;
-    background: var(--default-theme-light-color);
+    background: rgba(var(--default-theme-light-color), 1);
     cursor: default;
     font-size: 1.2em;
     border-radius: 3px
@@ -763,16 +762,16 @@ html {
 }
 
 #skills ul li.concept-library-framework {
-    color: var(--default-theme-dark-color);
+    color: rgba(var(--default-theme-dark-color), 1);
     background: linear-gradient(to bottom, #757b81 -5%, #b0b8bf 100%);
-    box-shadow: 0 2px 6px .5px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--box-shadow-default);
     font-weight: 1.2em
 }
 
 #skills ul li.light-theme.concept-library-framework {
-    color: var(--light-theme-foreground);
-    background: var(--light-theme-background);
-    box-shadow: 2px 2.5px 6.5px 1px rgba(0, 0, 0, 0.8)
+    color: rgba(var(--light-theme-foreground), 1);
+    background: rgba(var(--light-theme-background), 1);
+    box-shadow: var(--box-shadow-default)
 }
 
 .certi-content {
@@ -784,7 +783,7 @@ html {
 }
 
 .certi-content .certi-content-overlay {
-    background: rgba(0, 0, 0, .7);
+    background: rgba(var(--default-theme-light-color), 0.75);
     position: absolute;
     height: 99%;
     width: 100%;
@@ -799,26 +798,26 @@ html {
 }
 
 .certi-content .light-theme.certi-content-overlay {
-    background: rgba(255, 255, 255, .75)
+    background: rgba(var(--light-theme-background), 0.7)
 }
 
 .certi-canvas {
     height: 250px;
     text-align: center;
-    background: linear-gradient(to bottom, #757b81 -5%, var(--default-theme-light-color) 100%);
+    background: linear-gradient(to bottom, rgba(var(--default-theme-dark-color), 0.5) -5%, rgba(var(--default-theme-light-color), 0.8) 100%);
     padding-top: 2rem
 }
 
 .light-theme.certi-canvas {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.001))
+    background: linear-gradient(to bottom, rgba(var(--light-theme-foreground), 0.3) -5%, rgba(var(--light-theme-background), 0.8) 100%);
 }
 
 .certi-canvas>h4 {
-    color: var(--default-theme-dark-color)
+    color: rgba(var(--default-theme-dark-color), 1)
 }
 
 .light-theme.certi-canvas>h4 {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .certi-content-details {
@@ -847,14 +846,16 @@ html {
     font-size: 18px;
     background: 0 0;
     transition: .4s ease-in-out;
-    color: var(--default-theme-dark-color);
-    box-shadow: 0 7px 20px -6px rgba(0, 0, 0, 0.65);
-    font-weight: 700
+    color: rgba(var(--default-theme-dark-color), 1);
+    box-shadow: var(--box-shadow-default);
+    font-weight: 700;
+    margin-top: 0.4rem;
+    margin-bottom: 2.5rem
 }
 
 .container form input.light-theme,
 .container form textarea.light-theme {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .certi-content:hover .certi-content-details {
@@ -1050,33 +1051,33 @@ html {
 }
 
 ::placeholder {
-    color: var(--default-theme-less-darker-color);
+    color: rgba(var(--default-theme-dark-color), 0.5);
     opacity: 1
 }
 
 .light-theme::placeholder {
-    color: var(--light-theme-hover)
+    color: rgba(var(--light-theme-foreground), 0.5)
 }
 
 :-ms-input-placeholder {
-    color: var(--default-theme-less-darker-color)
+    color: rgba(var(--default-theme-dark-color), 0.5)
 }
 
 .light-theme:-ms-input-placeholder {
-    color: var(--light-theme-hover)
+    color: rgba(var(--light-theme-foreground), 0.5)
 }
 
 ::-ms-input-placeholder {
-    color: var(--default-theme-less-darker-color)
+    color: rgba(var(--default-theme-dark-color), 0.5)
 }
 
 .light-theme::-ms-input-placeholder {
-    color: var(--light-theme-hover)
+    color: rgba(var(--light-theme-foreground), 0.5)
 }
 
 .timeline::before {
     content: "";
-    background: var(--default-theme-light-color);
+    background: rgba(var(--default-theme-light-color), 1);
     width: 5px;
     height: 95%;
     position: absolute;
@@ -1085,7 +1086,7 @@ html {
 }
 
 .light-theme.timeline::before {
-    background: var(--light-theme-foreground)
+    background: rgba(var(--light-theme-foreground), 1)
 }
 
 .timeline-item {
@@ -1111,11 +1112,11 @@ html {
     top: 30px;
     left: -15px;
     border-width: 10px 15px 10px 0;
-    border-color: transparent var(--default-theme-light-color) transparent transparent
+    border-color: transparent rgba(var(--default-theme-light-color), 1) transparent transparent
 }
 
 .timeline-item:nth-child(2n) .light-theme.timeline-content::after {
-    border-color: transparent var(--light-theme-foreground) transparent transparent
+    border-color: transparent rgba(var(--light-theme-foreground), 1) transparent transparent
 }
 
 .timeline-item::after {
@@ -1130,11 +1131,11 @@ html {
     padding: 10px 30px;
     border-radius: 4px;
     background: 0 0;
-    box-shadow: 0 25px 25px -15px rgba(0, 0, 0, .8)
+    box-shadow: var(--box-shadow-timeline)
 }
 
 .light-theme.timeline-content {
-    box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.80)
+    box-shadow: var(--box-shadow-timeline)
 }
 
 .timeline-content::after {
@@ -1146,43 +1147,43 @@ html {
     top: 30px;
     right: -15px;
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent var(--default-theme-light-color)
+    border-color: transparent transparent transparent rgba(var(--default-theme-light-color), 1)
 }
 
 .light-theme.timeline-content::after {
-    border-color: transparent transparent transparent var(--light-theme-foreground)
+    border-color: transparent transparent transparent rgba(var(--light-theme-foreground), 1)
 }
 
 .timeline-img {
     width: 30px;
     height: 30px;
-    background: var(--default-theme-dark-color);
+    background: rgba(var(--default-theme-dark-color), 1);
     border-radius: 50%;
     position: absolute;
-    border: 5px solid var(--default-theme-light-color);
+    border: 5px solid rgba(var(--default-theme-light-color), 1);
     left: 50%;
     margin-top: 25px;
     margin-left: -15px
 }
 
 .light-theme.timeline-img {
-    background: var(--light-theme-background);
-    border: 6px solid var(--light-theme-foreground)
+    background: rgba(var(--light-theme-background), 1);
+    border: 6px solid rgba(var(--light-theme-foreground), 1)
 }
 
 .date {
-    background: linear-gradient(to bottom, #2b3035 -10%, #1a1d20 100%);
+    background: linear-gradient(180deg, rgba(var(--default-theme-light-color), 0.15) 0%, rgba(var(--default-theme-dark-color), 0.05) 50%, rgba(var(--default-theme-light-color), 0.15) 100%);
     border-radius: 3px;
     padding: 6px;
     position: absolute;
     top: 0;
     right: 0;
-    color: var(--default-theme-light-color)
+    color: rgba(var(--default-theme-light-color), 1)
 }
 
 .light-theme.date {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(255, 255, 255, 0.14) 50%, rgba(0, 0, 0, 0.14) 100%);
-    color: var(--light-theme-foreground);
+    background: linear-gradient(180deg, rgba(var(--light-theme-foreground), 0.25) 0%, rgba(var(--light-theme-background), 0.1) 50%, rgba(var(--light-theme-foreground), 0.25) 100%);
+    color: rgba(var(--light-theme-foreground), 1);
     font-weight: 550;
 }
 
@@ -1212,11 +1213,11 @@ html {
         top: 30px;
         left: -15px;
         border-width: 10px 15px 10px 0;
-        border-color: transparent var(--default-theme-light-color) transparent transparent
+        border-color: transparent rgba(var(--default-theme-light-color), 1) transparent transparent
     }
 
     .timeline .timeline-item:nth-child(odd) .light-theme.timeline-content::after {
-        border-color: transparent var(--light-theme-foreground) transparent transparent
+        border-color: transparent rgba(var(--light-theme-foreground), 1) transparent transparent
     }
 }
 
@@ -1272,25 +1273,25 @@ html {
 }
 
 footer {
-    background-color: var(--default-theme-light-color);
-    color: var(--default-theme-dark-color);
+    background-color: rgba(var(--default-theme-light-color), 1);
+    color: rgba(var(--default-theme-dark-color), 1);
     font-size: .83rem;
     padding-bottom: .35rem
 }
 
 footer.light-theme {
-    background-color: var(--light-theme-background);
-    color: var(--light-theme-foreground)
+    background-color: rgba(var(--light-theme-background), 1);
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .certi-content-text,
 .certi-content-title {
-    color: var(--default-theme-light-color)
+    color: rgba(var(--default-theme-dark-color), 1)
 }
 
 .light-theme.certi-content-text,
 .light-theme.certi-content-title {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .mt-15 {
@@ -1302,25 +1303,25 @@ footer.light-theme {
 }
 
 .portfolio-title {
-    color: var(--default-theme-light-color);
+    color: rgba(var(--default-theme-light-color), 1);
     font-size: 1.2rem;
     margin-left: .35rem;
     margin-top: 1.2rem
 }
 
 .light-theme.portfolio-title {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .portfolio-title-secondary {
-    color: var(--default-theme-light-color);
+    color: rgba(var(--default-theme-light-color), 1);
     font-size: 1rem;
     margin-left: .35rem;
     margin-top: .5rem
 }
 
 .light-theme.portfolio-title-secondary {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .portfolio-title>span {
@@ -1328,7 +1329,7 @@ footer.light-theme {
 }
 
 .title-page-content {
-    color: var(--default-theme-light-color);
+    color: rgba(var(--default-theme-light-color), 1);
     word-spacing: 1.5px;
     text-align: justify;
     font-size: 1.05rem;
@@ -1336,7 +1337,7 @@ footer.light-theme {
 }
 
 .light-theme.title-page-content {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .certi-content-title {
@@ -1360,45 +1361,45 @@ footer.light-theme {
 
 .projects-page-heading,
 .timeline-content-description {
-    color: var(--default-theme-light-color)
+    color: rgba(var(--default-theme-light-color), 1)
 }
 
 .light-theme.projects-page-heading,
 .light-theme.timeline-content-description {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .timeline-content-title {
-    color: var(--default-theme-light-color);
+    color: rgba(var(--default-theme-light-color), 1);
     padding-top: 30px;
     font-size: 1.5rem
 }
 
 .timeline-content-link {
-    color: var(--default-theme-light-color);
+    color: rgba(var(--default-theme-light-color), 1);
     font-size: .75rem
 }
 
 .contact-section {
-    color: var(--default-theme-dark-color);
+    color: rgba(var(--default-theme-dark-color), 1);
     padding: 8rem 0;
-    background: var(--default-theme-light-color)
+    background: rgba(var(--default-theme-light-color), 1)
 }
 
 .light-theme.timeline-content-title {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .light-theme.timeline-content-link {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .light-theme.contact-section {
-    background: var(--light-theme-background)
+    background: rgba(var(--light-theme-background), 1)
 }
 
 .light-theme.contact-section h3 {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .contact-form-text-alignment {
@@ -1408,12 +1409,12 @@ footer.light-theme {
 .contact-form-label {
     font-weight: 700;
     font-size: 1.2rem;
-    color: var(--default-theme-dark-color);
+    color: rgba(var(--default-theme-dark-color), 1);
     margin-left: 10px
 }
 
 .light-theme.contact-form-label {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .contact-form-input-field {
@@ -1424,7 +1425,7 @@ footer.light-theme {
 .contact-form-submit-button {
     border-radius: 7px;
     padding-top: 0;
-    box-shadow: 0 2px 6px .5px rgba(0, 0, 0, 0.85);
+    box-shadow: var(--box-shadow-default);
     border: 0
 }
 
@@ -1468,11 +1469,11 @@ div.timeline-content .icon-github {
     width: 5rem;
     height: 5rem;
     margin-bottom: -20px;
-    color: var(--default-theme-light-color)
+    color: rgba(var(--default-theme-light-color), 1)
 }
 
 .light-theme.icon-embed2 {
-    color: var(--light-theme-foreground)
+    color: rgba(var(--light-theme-foreground), 1)
 }
 
 .icon-sun {
