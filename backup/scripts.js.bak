@@ -238,33 +238,20 @@ async function registerSW() {
   }
 }
 
-// Helper function
-function hexToRGB(color) {
-  const r = parseInt(color.substr(1, 2), 16)
-  const g = parseInt(color.substr(3, 2), 16)
-  const b = parseInt(color.substr(5, 2), 16)
-  return `${r}, ${g}, ${b}`
-}
-
 // Toggler code for switching light theme to dark theme and vice-versa
-document.getElementsByClassName('foreground-theme-choosing-button-navbar')[0].onchange = function () {
-  const foregroundColor = document.getElementsByClassName('foreground-theme-choosing-button-navbar')[0];
-  const colorStringRGB = hexToRGB(foregroundColor.value);
-  document.documentElement.style.setProperty("--website-foreground-color", colorStringRGB);
-  document.documentElement.style.setProperty("--hamburger", `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28${colorStringRGB}, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`);
-}
-document.getElementsByClassName('background-theme-choosing-button-navbar')[0].onchange = function () {
-  const backgroundColor = document.getElementsByClassName('background-theme-choosing-button-navbar')[0];
-  const colorStringRGB = hexToRGB(backgroundColor.value);
-  document.documentElement.style.setProperty("--website-background-color", colorStringRGB);
-}
+document.getElementById('toggling-switch').onclick = function () {
+  const style = getComputedStyle(document.body);
+  const foregroundColor = style.getPropertyValue("--website-foreground-color");
+  const backgroundColor = style.getPropertyValue("--website-background-color");
 
-// Close navbar when clicked outside navbar region
-$(document).ready(function () {
-  $(document).click(function (event) {
-    const clickover = $(event.target);
-    if (!((clickover.hasClass("theme-choosing-button-navbar") || clickover.hasClass("foreground-theme-choosing-button-navbar") || clickover.hasClass("background-theme-choosing-button-navbar") || clickover.hasClass("theme-choosing-nav-link")))) {
-      $('.navbar-collapse').collapse('hide');
-    }
-  });
-});
+  if (foregroundColor === "34, 38, 42" && backgroundColor === "176, 184, 191") {
+    document.documentElement.style.setProperty("--website-foreground-color", "176, 184, 191");
+    document.documentElement.style.setProperty("--website-background-color", "34, 38, 42");
+    document.documentElement.style.setProperty("--hamburger", `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28176, 184, 191, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`);
+  }
+  else {
+    document.documentElement.style.setProperty("--website-foreground-color", "34, 38, 42");
+    document.documentElement.style.setProperty("--website-background-color", "176, 184, 191");
+    document.documentElement.style.setProperty("--hamburger", `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2834, 38, 42, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`);
+  }
+}

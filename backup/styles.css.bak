@@ -1,10 +1,10 @@
 :root {
-    --website-background-color: 176, 184, 191;
-    --website-foreground-color: 34, 38, 42;
+    --website-background-color: 34, 38, 42;
+    --website-foreground-color: 176, 184, 191;
     --box-shadow-navbar: 0 .5rem 1rem rgba(0, 0, 0, .15);
     --box-shadow-timeline: 0 25px 25px -15px rgba(0, 0, 0, .8);
     --box-shadow-default: 2px 2.5px 6.5px 1px rgba(0, 0, 0, 0.7);
-    --hamburger: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2834, 38, 42, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    --hamburger: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28176, 184, 191, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 @font-face {
@@ -59,7 +59,7 @@ ul {
     background-color: rgba(var(--website-background-color), 1)
 }
 
-.theme-foreground-color {
+.color-default-theme-light-color {
     color: rgba(var(--website-foreground-color), 1)
 }
 
@@ -75,7 +75,7 @@ ul {
 
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover,
-.theme-foreground-color:hover {
+.color-default-theme-light-color:hover {
     color: rgba(var(--website-foreground-color), 0.5)
 }
 
@@ -699,7 +699,7 @@ html {
 }
 
 .certi-content .certi-content-overlay {
-    background: rgba(var(--website-background-color), 0.75);
+    background: rgba(var(--website-background-color), 0.8);
     position: absolute;
     height: 99%;
     width: 100%;
@@ -1276,44 +1276,14 @@ div.timeline-content .icon-github {
     padding-top: 7px
 }
 
-.icon-Profile {
-    width: 7rem;
-    height: 7rem;
-    margin-bottom: -10px;
+.icon-embed2 {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: -20px;
     color: rgba(var(--website-foreground-color), 1)
 }
 
 .icon-color-palette-and-brush {
     width: 1.2rem;
     height: 0.85rem
-}
-
-input[type="color"] {
-    -webkit-appearance: none;
-    border: none;
-    width: 0.75rem;
-    height: 0.75rem;
-    overflow: hidden;
-    border-radius: 100%;
-    padding: 0;
-    cursor: pointer;
-    border: 1px solid rgba(var(--website-foreground-color), 1)
-}
-
-input[type="color"]::-webkit-color-swatch-wrapper {
-    padding: 0
-}
-
-input[type="color"]::-webkit-color-swatch {
-    border: none
-}
-
-.theme-choosing-button-navbar {
-    border: 1.5px solid rgba(var(--website-foreground-color), 1);
-    border-radius: 1.2rem;
-    height: 1rem;
-    width: 2.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around
 }
