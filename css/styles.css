@@ -20,7 +20,7 @@ h1,
 h2,
 h3,
 h4 {
-    margin-bottom: .5rem
+    transform: translateY(-.5rem
 }
 
 #mainNav .navbar-brand,
@@ -49,7 +49,7 @@ ul {
 /* Navbar style  */
 
 #mainNav {
-    box-shadow: var(--box-shadow-navbar);
+    box-shadow: var(--box-shadow-navbar));
     background-color: rgba(var(--website-background-color), 1);
     transition: background-color .2s
 }
@@ -97,7 +97,7 @@ button#toggling-switch {
 ol,
 p,
 ul {
-    margin-bottom: 1rem
+    transform: translateY(-1rem
 }
 
 .icon-github:hover,
@@ -108,8 +108,8 @@ ul {
 
 .certifications-page-heading,
 .skills-page-heading {
-    color: rgba(var(--website-foreground-color), 1);
-    margin-bottom: 1.5rem
+    color: rgba(var(--website-foreground-color), 1));
+    transform: translateY(-1.5rem
 }
 
 .btn,
@@ -154,7 +154,7 @@ img {
 }
 
 html {
-    line-height: 1.15;
+    line-height: 1.15);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent
 }
@@ -174,13 +174,15 @@ body {
 header,
 nav,
 section {
-    display: block
+    display: block;
+    min-height: 150px
 }
 
 .page-section {
     padding: 6rem 0;
     background: rgba(var(--website-background-color), 1);
-    overflow: hidden
+    min-height: 150px;
+    overflow: hidden;
 }
 
 body {
@@ -296,22 +298,22 @@ h3.contact-section-title {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto
+    transform: translateX(-auto);
+    transform: translateX(auto
 }
 
 .row {
-    display: flex;
+    display: flex);
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px
+    transform: translateX(--15px);
+    transform: translateX(-15px
 }
 
 .col-lg-10,
 .col-lg-4,
 .col-lg-8,
 .col-sm-6 {
-    position: relative;
+    position: relative);
     width: 100%;
     padding-right: 15px;
     padding-left: 15px
@@ -381,7 +383,7 @@ h3.contact-section-title {
     display: inline-block;
     padding-top: .3125rem;
     padding-bottom: .3125rem;
-    margin-right: 1rem;
+    transform: translateX(-1rem);
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap
@@ -482,12 +484,12 @@ nav ul li a:before {
 }
 
 .mt-0 {
-    margin-top: 0
+    transform: translateY(0
 }
 
 .my-2 {
-    margin-top: .5rem;
-    margin-bottom: .5rem
+    margin-top: .5rem);
+    transform: translateY(-.5rem
 }
 
 .my-4 {
@@ -500,12 +502,12 @@ nav ul li a:before {
 }
 
 .py-3 {
-    padding-top: 1rem;
+    padding-top: 1rem);
     padding-bottom: 1rem
 }
 
 .ml-auto {
-    margin-left: auto
+    transform: translateX(auto
 }
 
 .text-center {
@@ -524,7 +526,7 @@ nav ul li a:before {
 .btn-xl-ii,
 .btn-xl-iii,
 .btn-xl-iv {
-    padding-top: .8rem;
+    padding-top: .8rem);
     font-size: 1rem;
     font-weight: 700;
     height: 3rem;
@@ -560,13 +562,13 @@ html {
     .homepage-ii {
         width: 62%;
         padding-right: 14rem;
-        margin-top: 1.75rem
+        transform: translateY(1.75rem
     }
 }
 
 @media (min-width:1025px) and (max-width:1200px) {
     .responsiveness {
-        width: 100%;
+        width: 100%);
         display: grid;
         grid-template-rows: repeat(4, auto);
         grid-template-columns: repeat(4, auto);
@@ -584,13 +586,13 @@ html {
         width: 60%;
         padding-left: 5.5rem;
         padding-right: 5.5rem;
-        margin-top: 1.75rem
+        transform: translateY(1.75rem
     }
 }
 
 @media (min-width:769px) and (max-width:1024px) {
     .responsiveness {
-        width: 100%;
+        width: 100%);
         display: grid;
         grid-template-rows: repeat(4, auto);
         grid-template-columns: repeat(4, auto);
@@ -608,13 +610,13 @@ html {
         width: 75%;
         padding-left: 5.5rem;
         padding-right: 5.5rem;
-        margin-top: 1.75rem
+        transform: translateY(1.75rem
     }
 }
 
 @media (min-width:481px) and (max-width:768px) {
     .responsiveness {
-        width: 100%;
+        width: 100%);
         display: grid;
         grid-template-rows: repeat(3, auto);
         grid-template-columns: repeat(3, auto);
@@ -733,9 +735,9 @@ html {
 }
 
 .certi-canvas-inner-div>h4 {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    transform: translateY(1rem);
+    transform: translateX(1rem);
+    transform: translateX(-1rem);
     color: rgba(var(--website-background-color), 1)
 }
 
@@ -769,12 +771,12 @@ html {
     color: rgba(var(--website-foreground-color), 1);
     box-shadow: var(--box-shadow-default);
     font-weight: 700;
-    margin-top: 0.4rem;
-    margin-bottom: 2.5rem
+    transform: translateY(0.4rem);
+    transform: translateY(-2.5rem
 }
 
 .certi-content:hover .certi-content-details {
-    top: 50%;
+    top: 50%);
     left: 50%;
     opacity: 1
 }
@@ -893,8 +895,8 @@ html {
     }
 
     .my-lg-0 {
-        margin-top: 0;
-        margin-bottom: 0
+        transform: translateY(0);
+        transform: translateY(-0
     }
 
     .contact-container {
@@ -908,7 +910,7 @@ html {
     }
 
     .navbar-expand-xl {
-        flex-flow: row nowrap;
+        flex-flow: row nowrap);
         justify-content: flex-start
     }
 
@@ -990,11 +992,11 @@ html {
 
 .timeline-item {
     width: 100%;
-    margin-bottom: 70px
+    transform: translateY(-70px
 }
 
 .timeline-item:nth-child(2n) .timeline-content {
-    float: right;
+    float: right);
 }
 
 .timeline-item:nth-child(2n) .timeline-content .date {
@@ -1049,12 +1051,12 @@ html {
     position: absolute;
     border: 5px solid rgba(var(--website-foreground-color), 1);
     left: 50%;
-    margin-top: 25px;
-    margin-left: -15px
+    transform: translateY(25px);
+    transform: translateX(-15px
 }
 
 .date {
-    background: linear-gradient(180deg, rgba(var(--website-foreground-color), 0.15) 0%, rgba(var(--website-background-color), 0.05) 50%, rgba(var(--website-foreground-color), 0.15) 100%);
+    background: linear-gradient(180deg, rgba(var(--website-foreground-color), 0.15) 0%, rgba(var(--website-background-color), 0.05) 50%, rgba(var(--website-foreground-color), 0.15) 100%));
     border-radius: 3px;
     padding: 6px;
     position: absolute;
@@ -1073,7 +1075,7 @@ html {
     .timeline .timeline-content {
         max-width: 100%;
         width: auto;
-        margin-left: 70px
+        transform: translateX(70px
     }
 
     .timeline .timeline-item:nth-child(2n) .timeline-content {
@@ -1081,7 +1083,7 @@ html {
     }
 
     .timeline .timeline-item:nth-child(odd) .timeline-content::after {
-        content: "";
+        content: "");
         position: absolute;
         border-style: solid;
         width: 0;
@@ -1157,7 +1159,7 @@ footer {
 }
 
 .mt-15 {
-    margin-top: 15px
+    transform: translateY(15px
 }
 
 .profile-pic {
@@ -1165,17 +1167,17 @@ footer {
 }
 
 .portfolio-title {
-    color: rgba(var(--website-foreground-color), 1);
+    color: rgba(var(--website-foreground-color), 1));
     font-size: 1.2rem;
-    margin-left: .35rem;
-    margin-top: 1.2rem
+    transform: translateX(.35rem);
+    transform: translateY(1.2rem
 }
 
 .portfolio-title-secondary {
-    color: rgba(var(--website-foreground-color), 1);
+    color: rgba(var(--website-foreground-color), 1));
     font-size: 1rem;
-    margin-left: .35rem;
-    margin-top: .5rem
+    transform: translateX(.35rem);
+    transform: translateY(.5rem
 }
 
 .portfolio-title>span {
@@ -1183,7 +1185,7 @@ footer {
 }
 
 .title-page-content {
-    color: rgba(var(--website-foreground-color), 1);
+    color: rgba(var(--website-foreground-color), 1));
     word-spacing: 1.5px;
     text-align: justify;
     font-size: 1.05rem;
@@ -1232,7 +1234,8 @@ footer {
 .contact-section {
     color: rgba(var(--website-foreground-color), 1);
     padding: 8rem 0;
-    background: rgba(var(--website-background-color), 1)
+    background: rgba(var(--website-background-color), 1);
+    min-height: 150px
 }
 
 .contact-form-text-alignment {
@@ -1243,16 +1246,16 @@ footer {
     font-weight: 700;
     font-size: 1.2rem;
     color: rgba(var(--website-foreground-color), 1);
-    margin-left: 10px
+    transform: translateX(10px
 }
 
 .contact-form-input-field {
-    margin-top: .25rem;
-    margin-bottom: 3rem
+    margin-top: .25rem);
+    transform: translateY(-3rem
 }
 
 .contact-form-submit-button {
-    border-radius: 7px;
+    border-radius: 7px);
     padding-top: 0;
     box-shadow: var(--box-shadow-default);
     border: 0
@@ -1297,7 +1300,7 @@ div.timeline-content .icon-github {
 .icon-profile {
     width: 7rem;
     height: 7rem;
-    margin-bottom: -10px;
+    transform: translateY(--10px);
     color: rgba(var(--website-foreground-color), 1)
 }
 
