@@ -1194,25 +1194,6 @@ footer {
     font-size: 2rem
 }
 
-/* .certi-thumbnail-size-mitx {
-    width: 200;
-    height: 48
-}
-
-.certi-thumbnail-size-harvard {
-
-}
-
-.certi-thumbnail-size-dl {
-    width: 150;
-    height: 95
-}
-
-.certi-thumbnail-size-stanford {
-    width: 150;
-    height: 85
-} */
-
 .projects-page-heading,
 .timeline-content-description {
     color: rgba(var(--website-foreground-color), 1)
