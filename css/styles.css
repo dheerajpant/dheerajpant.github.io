@@ -174,13 +174,14 @@ body {
 header,
 nav,
 section {
-    display: block
+    display: block;
 }
 
 .page-section {
     padding: 6rem 0;
     background: rgba(var(--website-background-color), 1);
-    overflow: hidden
+    overflow: hidden;
+    min-height: 150px
 }
 
 body {
@@ -1232,7 +1233,8 @@ footer {
 .contact-section {
     color: rgba(var(--website-foreground-color), 1);
     padding: 8rem 0;
-    background: rgba(var(--website-background-color), 1)
+    background: rgba(var(--website-background-color), 1);
+    min-height: 150px
 }
 
 .contact-form-text-alignment {
