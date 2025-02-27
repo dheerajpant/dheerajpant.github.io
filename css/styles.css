@@ -1185,6 +1185,10 @@ footer {
     height: 48
 }
 
+.certi-thumbnail-margin-mitx {
+    margin-top: 1.8rem
+}
+
 .certi-thumbnail-size-harvard {
     width: 180;
     height: 40
