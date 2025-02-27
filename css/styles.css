@@ -717,14 +717,28 @@ html {
     height: 250px;
     text-align: center;
     background: linear-gradient(to bottom, rgba(var(--website-foreground-color), 0.85) -50%, rgba(var(--website-background-color), 0.85) 95%);
-    padding-top: 2rem;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr; 
+    width: 100%
 }
 
-.certi-canvas>h4 {
+.certi-canvas-inner-div {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    width: 100%
+}
+
+.certi-canvas-inner-div>h4 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     color: rgba(var(--website-background-color), 1)
 }
+
 
 .certi-content-details {
     position: absolute;
@@ -1180,18 +1194,13 @@ footer {
     font-size: 2rem
 }
 
-.certi-thumbnail-size-mitx {
+/* .certi-thumbnail-size-mitx {
     width: 200;
     height: 48
 }
 
-.certi-thumbnail-margin-mitx {
-    margin-top: 1.8rem
-}
-
 .certi-thumbnail-size-harvard {
-    width: 180;
-    height: 40
+
 }
 
 .certi-thumbnail-size-dl {
@@ -1202,7 +1211,7 @@ footer {
 .certi-thumbnail-size-stanford {
     width: 150;
     height: 85
-}
+} */
 
 .projects-page-heading,
 .timeline-content-description {
