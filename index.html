@@ -2,34 +2,89 @@
 <html lang="en">
 
 <head>
+  <!-- Basic Meta -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description"
-    content="I am Dheeraj. I pursued my master's degree in Computer Science from IIT Kanpur. I am interested in Machine Learning, Data Science and Statistics.">
-  <meta name="keywords"
-    content="Artificial Intelligence, Data Scientist, Machine Learning, Computer Vision, Software Developer, Software Engineer, Applied Data Scientist, Dheeraj Pant, Dheeraj, Dheeraj Kumar Pant">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta -->
+  <title>Dheeraj Pant | Machine Learning Engineer, Data Scientist & IIT Kanpur Alumni</title>
+  <meta name="description" content="I am Dheeraj Pant – an IIT Kanpur Master's graduate specializing in machine learning, data science, and AI solutions. Explore computer vision projects, data science case studies, and innovative AI applications.">
+  <meta name="keywords" content="Machine Learning Engineer, Data Scientist, AI Solutions, Computer Vision, IIT Kanpur Alumni, Dheeraj Pant">
+  <meta name="robots" content="index, follow">
   <meta name="author" content="Dheeraj Pant">
   <meta name="copyright" content="Dheeraj Pant">
-  <meta name="robots" content="follow">
   <meta name="google-site-verification" content="J5s2bY_sQ97XFR-bFZGiZSWC0pGV_B0gna1WD06tTr0">
-  <meta name="title" property="og:title" content="Dheeraj Pant | Machine Learning, Data Science and Statistics">
-  <meta property="og:type" content="Website">
-  <meta name="image" property="og:image"
-    content="https://raw.githubusercontent.com/dheerajpant/dheerajpant.github.io/main/thumbnails/Thumbnail.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dheeraj Pant | Machine Learning Engineer & Data Scientist">
+  <meta property="og:image" content="https://raw.githubusercontent.com/dheerajpant/dheerajpant.github.io/main/thumbnails/Thumbnail.webp">
   <meta property="og:url" content="https://dheerajpant.github.io/">
-  <meta property="og:description"
-    content="I am Dheeraj. I pursued my master's degree in Computer Science from IIT Kanpur. I am interested in Machine Learning, Data Science and Statistics.">
-  <meta name="twitter:card" content="Dheeraj Pant | Machine Learning, Data Science and Statistics">
+  <meta property="og:description" content="IIT Kanpur Alumni building AI solutions – a portfolio showcasing machine learning, data science, and computer vision projects.">
+  <meta property="og:site_name" content="Dheeraj Pant Portfolio">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dheeraj Pant | ML Engineer & Data Scientist">
+  <meta name="twitter:description" content="IIT Kanpur Alumni specializing in machine learning, data science, and AI solutions.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/dheerajpant/dheerajpant.github.io/main/thumbnails/Thumbnail.webp">
+  <!-- <meta name="twitter:creator" content="@YourTwitterHandle"> -->
+
+  <!-- Theme and Appearance -->
   <meta name="theme-color" content="#2b3035">
+  <link rel="canonical" href="https://dheerajpant.github.io/">
+  
+  <!-- Preconnect for Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <title>Dheeraj Pant | Machine Learning, Data Science and Statistics</title>
-
-  <link rel="canonical" href="https://dheerajpant.github.io">
+  <!-- Assets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="thumbnails/icon.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="thumbnails/icon.webp">
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="thumbnails/icon.png">
-  <link rel="apple-touch-icon" href="thumbnails/icon.png">
-  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dheeraj Pant",
+    "jobTitle": "Machine Learning Engineer & Data Scientist",
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Indian Institute of Technology Kanpur",
+        "sameAs": "https://www.iitk.ac.in/"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "GB Pant University of Agriculture and Technology"
+        "sameAs": "https://www.gbpuat.ac.in/"
+      }
+    ],
+    "url": "https://dheerajpant.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/dheerajkumarpant/",
+      "https://github.com/dheerajkumarpant"
+      "https://github.com/dheerajpant"
+    ],
+    "image": "https://raw.githubusercontent.com/dheerajpant/dheerajpant.github.io/main/thumbnails/Thumbnail.webp"
+  }
+  </script>
+
+  <!-- Google Analytics (Optional) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  -->
 </head>
 
 <body id="home">
@@ -240,17 +295,30 @@
                   <h4><strong>Machine Learning</strong></h4><br>
                 </div>
                 <div class = "certi-canvas-inner-div">
-                  <img src="thumbnails/Stanford.png" width="150" height="85"
-                    alt="Machine Learning Certificate by Stanford University" loading="lazy">
+                  <picture>
+                    <!-- WebP version for larger screens -->
+                    <source 
+                      srcset="thumbnails/Stanford.webp 150w" 
+                      type="image/webp"
+                      media="(min-width: 150px)"
+                      sizes="150px">
+                    
+                    <!-- Fallback for browsers without WebP support -->
+                    <source 
+                      srcset="thumbnails/Stanford.png" 
+                      type="image/png">
+                      <img src="thumbnails/Stanford.png" width="150" height="85"
+                      alt="Machine Learning Certificate by Stanford University" loading="lazy" decoding="async">
+                  </picture>
                 </div>
               </div>
               <div class="certi-content-details fadeIn-bottom">
                 <p class=" certi-content-title">CERTIFICATE</p>
-                <p class=" certi-content-text"><svg class="icon icon-download3">
-                    <symbol id="icon-download3-1" viewBox="0 0 32 32">
+                <p class=" certi-content-text"><svg class="icon icon-download">
+                    <symbol id="icon-download-1" viewBox="0 0 32 32">
                       <path d="M23 14l-8 8-8-8h5v-12h6v12zM15 22h-15v8h30v-8h-15zM28 26h-4v-2h4v2z"></path>
                     </symbol>
-                    <use xlink:href="#icon-download3-1"></use>
+                    <use xlink:href="#icon-download-1"></use>
                   </svg>
                 </p>
               </div>
@@ -267,17 +335,31 @@
                   <h4><strong>Deep Learning</strong></h4><br>
                 </div>
                 <div class = "certi-canvas-inner-div">
-                  <img src="thumbnails/deeplearning.png" width="150" height="95"
-                    alt="Deep Learning Certificate by deeplearning.ai" loading="lazy">
+                  <picture>
+                    <!-- WebP version for larger screens -->
+                    <source 
+                      srcset="thumbnails/deeplearning.webp 150w" 
+                      type="image/webp"
+                      media="(min-width: 150px)"
+                      sizes="150px">
+                    
+                    <!-- Fallback for browsers without WebP support -->
+                    <source 
+                      srcset="thumbnails/deeplearning.png" 
+                      type="image/png">
+
+                      <img src="thumbnails/deeplearning.png" width="150" height="95"
+                      alt="Deep Learning Certificate by deeplearning.ai" loading="lazy" decoding="async">
+                  </picture>   
                 </div>
               </div>
               <div class="certi-content-details fadeIn-bottom">
                 <p class=" certi-content-title">CERTIFICATE</p>
-                <p class=" certi-content-text"><svg class="icon icon-download3">
-                    <symbol id="icon-download3-2" viewBox="0 0 32 32">
+                <p class=" certi-content-text"><svg class="icon icon-download">
+                    <symbol id="icon-download-2" viewBox="0 0 32 32">
                       <path d="M23 14l-8 8-8-8h5v-12h6v12zM15 22h-15v8h30v-8h-15zM28 26h-4v-2h4v2z"></path>
                     </symbol>
-                    <use xlink:href="#icon-download3-2"></use>
+                    <use xlink:href="#icon-download-2"></use>
                   </svg>
                 </p>
               </div>
@@ -294,17 +376,31 @@
                   <h4><strong>PH526x : Using Python for Research</strong></h4><br>
                 </div>
                 <div class = "certi-canvas-inner-div">
-                  <img src="thumbnails/Harvard.png" width="110" height="107"
-                    alt="PH526x: Using Python for Research" loading="lazy">
+                  <picture>
+                    <!-- WebP version for larger screens -->
+                    <source 
+                      srcset="thumbnails/Harvard.webp 110w" 
+                      type="image/webp"
+                      media="(min-width: 110px)"
+                      sizes="110px">
+                    
+                    <!-- Fallback for browsers without WebP support -->
+                    <source 
+                      srcset="thumbnails/Harvard.png" 
+                      type="image/png">
+
+                      <img src="thumbnails/Harvard.png" width="110" height="107"
+                      alt="PH526x: Using Python for Research" loading="lazy" decoding="async">
+                  </picture>  
                 </div>
               </div>
               <div class="certi-content-details fadeIn-bottom">
                 <p class=" certi-content-title">CERTIFICATE</p>
-                <p class=" certi-content-text"><svg class="icon icon-download3">
-                    <symbol id="icon-download3-3" viewBox="0 0 32 32">
+                <p class=" certi-content-text"><svg class="icon icon-download">
+                    <symbol id="icon-download-3" viewBox="0 0 32 32">
                       <path d="M23 14l-8 8-8-8h5v-12h6v12zM15 22h-15v8h30v-8h-15zM28 26h-4v-2h4v2z"></path>
                     </symbol>
-                    <use xlink:href="#icon-download3-3"></use>
+                    <use xlink:href="#icon-download-3"></use>
                   </svg>
                 </p>
               </div>
@@ -322,17 +418,31 @@
                   <h4><strong>6.431x : Probability - The Science of Uncertainty and Data</strong></h4><br>
                 </div>
                 <div class = "certi-canvas-inner-div">
-                  <img src="thumbnails/mitx.png" width="200" height="48" 
-                  alt="6.431x: Probability - The Science of Uncertainty and Data" loading="lazy">
+                  <picture>
+                    <!-- WebP version for larger screens -->
+                    <source 
+                      srcset="thumbnails/mitx.webp 200w" 
+                      type="image/webp"
+                      media="(min-width: 200px)"
+                      sizes="200px">
+                    
+                    <!-- Fallback for browsers without WebP support -->
+                    <source 
+                      srcset="thumbnails/mitx.png" 
+                      type="image/png">
+
+                      <img src="thumbnails/mitx.png" width="200" height="48"
+                      alt="6.431x: Probability - The Science of Uncertainty and Data" loading="lazy" decoding="async">
+                  </picture>
                 </div>
               </div>
               <div class="certi-content-details fadeIn-bottom">
                 <p class=" certi-content-title">CERTIFICATE</p>
-                <p class=" certi-content-text"><svg class="icon icon-download3">
-                    <symbol id="icon-download3-3" viewBox="0 0 32 32">
+                <p class=" certi-content-text"><svg class="icon icon-download">
+                    <symbol id="icon-download-4" viewBox="0 0 32 32">
                       <path d="M23 14l-8 8-8-8h5v-12h6v12zM15 22h-15v8h30v-8h-15zM28 26h-4v-2h4v2z"></path>
                     </symbol>
-                    <use xlink:href="#icon-download3-3"></use>
+                    <use xlink:href="#icon-download-4"></use>
                   </svg>
                 </p>
               </div>
@@ -350,17 +460,31 @@
                   <h4><strong>18.6501x : Fundamentals of Statistics</strong></h4><br>
                 </div>
                 <div class = "certi-canvas-inner-div">
-                  <img src="thumbnails/mitx.png" width="200" height="48" 
-                    alt="18.6501x: Fundamentals of Statistics" loading="lazy">
+                  <picture>
+                    <!-- WebP version for larger screens -->
+                    <source 
+                      srcset="thumbnails/mitx.webp 200w" 
+                      type="image/webp"
+                      media="(min-width: 200px)"
+                      sizes="200px">
+                    
+                    <!-- Fallback for browsers without WebP support -->
+                    <source 
+                      srcset="thumbnails/mitx.png" 
+                      type="image/png">
+
+                      <img src="thumbnails/mitx.png" width="200" height="48"
+                      alt="18.6501x: Fundamentals of Statistics" loading="lazy" decoding="async">
+                  </picture>
                 </div>
               </div>
               <div class="certi-content-details fadeIn-bottom">
                 <p class=" certi-content-title">CERTIFICATE</p>
-                <p class=" certi-content-text"><svg class="icon icon-download3">
-                    <symbol id="icon-download3-3" viewBox="0 0 32 32">
+                <p class=" certi-content-text"><svg class="icon icon-download">
+                    <symbol id="icon-download-5" viewBox="0 0 32 32">
                       <path d="M23 14l-8 8-8-8h5v-12h6v12zM15 22h-15v8h30v-8h-15zM28 26h-4v-2h4v2z"></path>
                     </symbol>
-                    <use xlink:href="#icon-download3-3"></use>
+                    <use xlink:href="#icon-download-5"></use>
                   </svg>
                 </p>
               </div>
@@ -377,17 +501,31 @@
                   <h4><strong>6.86x : Machine Learning with Python - From Linear Models to Deep Learning</strong></h4><br>
                 </div>
                 <div class = "certi-canvas-inner-div">
-                  <img src="thumbnails/mitx.png" width="200" height="48" 
-                    alt="6.86x: Machine Learning with Python-From Linear Models to Deep Learning" loading="lazy">
+                  <picture>
+                    <!-- WebP version for larger screens -->
+                    <source 
+                      srcset="thumbnails/mitx.webp 200w" 
+                      type="image/webp"
+                      media="(min-width: 200px)"
+                      sizes="200px">
+                    
+                    <!-- Fallback for browsers without WebP support -->
+                    <source 
+                      srcset="thumbnails/mitx.png" 
+                      type="image/png">
+
+                      <img src="thumbnails/mitx.png" width="200" height="48"
+                      alt="6.86x: Machine Learning with Python-From Linear Models to Deep Learning" loading="lazy" decoding="async">
+                  </picture>
                 </div>
               </div>
               <div class="certi-content-details fadeIn-bottom">
                 <p class=" certi-content-title">CERTIFICATE</p>
-                <p class=" certi-content-text"><svg class="icon icon-download3">
-                    <symbol id="icon-download3-3" viewBox="0 0 32 32">
+                <p class=" certi-content-text"><svg class="icon icon-download">
+                    <symbol id="icon-download-6" viewBox="0 0 32 32">
                       <path d="M23 14l-8 8-8-8h5v-12h6v12zM15 22h-15v8h30v-8h-15zM28 26h-4v-2h4v2z"></path>
                     </symbol>
-                    <use xlink:href="#icon-download3-3"></use>
+                    <use xlink:href="#icon-download-6"></use>
                   </svg>
                 </p>
               </div>
